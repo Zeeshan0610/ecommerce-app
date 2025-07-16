@@ -11,11 +11,10 @@ function Products() {
             setProducts(productsData);
         }, 500);
     }, []);
-    console.log("Products array:", products);
 
     return (
-        <div>
-            <h2>All Products</h2>
+        <div className={styles.container}>
+            <h2 className={styles.title}>All Products</h2>
             <div className={styles.grid}>
                 {products.map((product) => (
                     <ProductCard key={product.id} product={product} />

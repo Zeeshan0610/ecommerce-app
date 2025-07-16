@@ -1,23 +1,44 @@
 [
-    {
-        "id": 1,
-        "name": "Smartphone",
-        "description": "Latest Android smartphone",
-        "price": 14999,
-        "image": "https://via.placeholder.com/150"
-    },
-    {
-        "id": 2,
-        "name": "Wireless Headphones",
-        "description": "Noise cancelling over-ear headphones",
-        "price": 4999,
-        "image": "https://via.placeholder.com/150" 
-    },
-    {
-        "id": 3,
-        "name": "Smart Watch",
-        "description": "Fitness and healt tracking smart watch",
-        "price": 2999,
-        "image": "https://via.placeholder.com/150"
-    }
+  {
+    "id": 1,
+    "name": "Cool T-Shirt",
+    "price": 499,
+    "image": "/images/shirt1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Blue Jeans",
+    "price": 999,
+    "image": "/images/jeans1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Running Shoes",
+    "price": 1299,
+    "image": "/images/shoes1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Black Hoodie",
+    "price": 799,
+    "image": "/images/hoodie1.jpg"
+  },
+{
+    "id": 5,
+    "name": "Smart Phone",
+    "price": 29999,
+    "image": "/images/phone1.webp"
+  },
+  {
+    "id": 6,
+    "name": "Earbuds",
+    "price": 4999,
+    "image": "/images/buds1.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Smart Watch",
+    "price": 8999,
+    "image": "/images/watch1.jpg"
+  }
 ]

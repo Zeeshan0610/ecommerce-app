@@ -1,27 +1,32 @@
-import React from "react";
-import styles from './ProductCard.module.css';
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
+import styles from './ProductCard.module.css';
 
 function ProductCard({ product }) {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  const { addToCart } = useCart();
+  const [showMsg, setShowMsg] = useState(false);
 
-    const handleClick = () => {
-        navigate(`/products/${product.id}`);
-    };
-    return (
-        <div 
-        onClick={handleClick}
-        style={{
-            border: '1px solid black',
-            margin: '10px',
-            padding: '10px',
-            cursor: 'pointer',
-        }}
-        >
-        <h3>{product.name}</h3>
-         <p>₹ {product.price}</p>
-        </div>
-    );
+  const handleAddToCart = () => {
+    addToCart(product);
+    setShowMsg(true);
+    setTimeout(() => setShowMsg(false), 2000); 
+  };
+
+  const handleClick = () => {
+    navigate(`/products/${product.id}`);
+  };
+
+  return (
+    <div className={styles.card}>
+      <img src={product.image} alt={product.name} className={styles.productImage} />
+      <h3>{product.name}</h3>
+      <p>₹ {product.price}</p>
+      <button onClick={handleAddToCart} className={styles.addToCartBtn}> Add to Cart</button>
+      {showMsg && <div className={styles.toast}>✅ Product added to cart!</div>}
+    </div>
+  );
 }
 
 export default ProductCard;
