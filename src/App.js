@@ -8,11 +8,11 @@ import ProductDetails from './pages/ProductDetails/ProductDetails';
 function App() {
   return (
     <Router>
-      <div style={{padding: "2rem"}}>
-        <nav style={{marginBottom: "1rem"}}>
+      <div style={{ padding: '2rem' }}>
+        <nav style={{marginBottom: '1rem' }}>
           <Link to="/" style={{marginRight: 10}}>Home</Link>
-          <Link to="/Produtcs" style={{marginRight: 10}}>Produtcs</Link>
-          <Link to="/Cart">Cart</Link>
+          <Link to="/products" style={{ marginRight: 10 }}>Products</Link>
+          <Link to="/cart">Cart</Link>
         </nav>
 
         <Routes>
@@ -20,7 +20,6 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
-
         </Routes>
       </div>
     </Router>

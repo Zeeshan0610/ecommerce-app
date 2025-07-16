@@ -1,14 +1,25 @@
 import React from "react";
 import styles from './ProductCard.module.css';
+import { useNavigate } from "react-router-dom";
 
 function ProductCard({ product }) {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/products/${product.id}`);
+    };
     return (
-        <div className={styles.card}>
-        <img src={product.image} alt={product.name} />
+        <div 
+        onClick={handleClick}
+        style={{
+            border: '1px solid black',
+            margin: '10px',
+            padding: '10px',
+            cursor: 'pointer',
+        }}
+        >
         <h3>{product.name}</h3>
-        <p>{product.description}</p>
-        <p className={styles.price}>₹ {product.price}</p>
-        <button>Add to Cart</button>
+         <p>₹ {product.price}</p>
         </div>
     );
 }
