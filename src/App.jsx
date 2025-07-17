@@ -32,7 +32,7 @@ function App() {
 
         {}
         <footer className="footer">
-          © {new Date().getFullYear()} Zeeshan E-Commerce App. All rights reserved.
+          © {new Date().getFullYear()} ShopZee App. All rights reserved.
         </footer>
       </div>
     </Router>

@@ -75,7 +75,7 @@
 
 .orderForm input,
 .orderForm textarea {
-  width: 100%;
+  width: -webkit-fill-available;
   margin-bottom: 1rem;
   padding: 0.8rem;
   font-size: 1rem;

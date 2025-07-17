@@ -4,6 +4,21 @@
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border-color: #007bff;
+}
+
+.card:active {
+  transform: translateY(-2px);
 }
 
 .productImage {
@@ -11,12 +26,37 @@
   height: 150px;
   object-fit: contain;
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .productImage {
+  transform: scale(1.05);
+}
+
+.productName {
+  margin: 0.5rem 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.card:hover .productName {
+  color: #007bff;
+}
+
+.productPrice {
+  margin: 0.5rem 0;
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .toast {
   margin-top: 8px;
   color: green;
   font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .addToCartBtn {
@@ -27,9 +67,16 @@
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .addToCartBtn:hover {
-  background-color: #0056b3; 
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.addToCartBtn:active {
+  transform: scale(0.98);
 }
